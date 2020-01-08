@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "@types/node": "^12.12.21",
-    "json-server": "^0.15.1"
+    "json-server": "^0.15.1",
+    "uuid": "^3.3.3"
   },
   "nodemonConfig": {
     "ignore": [
