@@ -1,4 +1,4 @@
-import { createBook, getAll, getBook, updateBook } from './books.dal';
+import { createBook, getAll, getBook, getBooksByAuthor, updateBook } from './books.dal';
 import { CreateBookBody } from '../../shared/interfaces/create-book-body.interface';
 import { Book } from '../../shared/interfaces/book.interface';
 
@@ -9,6 +9,10 @@ export class BooksService {
 
   public static async getBook(id: string): Promise<Book> {
     return await getBook(id);
+  }
+
+  public static async getBooksByAuthor(id: string): Promise<Book[]> {
+    return await getBooksByAuthor(id);
   }
 
   public static async createBook(book: CreateBookBody): Promise<Book> {

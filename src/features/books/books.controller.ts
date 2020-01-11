@@ -18,6 +18,15 @@ export const getOneBook = async (req, res, next) => {
   }
 };
 
+export const getBooksByAuthor = async (req, res, next) => {
+  try {
+    const books = await BooksService.getBooksByAuthor(req.params.authorId);
+    res.json(books);
+  } catch (e) {
+    next(e);
+  }
+};
+
 export const createNewBook = async (req, res, next) => {
   try {
     const book = await BooksService.createBook(req.body);
